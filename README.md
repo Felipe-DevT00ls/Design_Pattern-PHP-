@@ -2,7 +2,7 @@
 Autor: Gabriel Felipe.
 
 <h1 id="sobre">Sobre</h1>
-Nesse arquivo busco listar e explicar a maior parte dos design pattern utilizando a linguagem php.<br>
+Neste arquivo busco listar e explicar a maior parte dos design pattern utilizando a linguagem php.<br>
 Estou fazendo este documento para ajudar quem está começando a estuda-los, ou até mesmo, servir como<br>
 uma colinha para programadores ou desenvolvedores que já conhecem sobre.
 
@@ -57,7 +57,7 @@ class Nota
 
 aqui temos duas classes, porém só acessaremos uma delas, que será a classe Aluno<br>
 através dela utilizaremos os metódos da classe Nota. <br>
-Para isso definimos um metódo chamado `defNota()`, ele é responsavél por instanciar a classe que<br>
+Para isso definimos um metódo chamado `defNota()`, ele é responsável por instanciar a classe que<br>
 que possui nosso método desejado.<br><br>
 
 logo para definirmos uma nota, ficará dessa maneira: <br>
@@ -71,7 +71,7 @@ logo para definirmos uma nota, ficará dessa maneira: <br>
 <br><br>
 
 Dessa forma percebemos que ao utilizarmos o SimpleFactory evitamos que nossa classe seja utilizada de maneira direta.<br>
-pensando além podemos até mesmo fazer validações antes de acessar indiretamente nossa classe.<br><br>
+Pensando além podemos até mesmo fazer validações antes de acessar indiretamente nossa classe.<br><br>
 
 Para isso faremos algumas alterações nas nossas classes.<br>
 Primeiro de tudo, definiremos uma interface, e logo veremos a sua utilidade
@@ -84,7 +84,7 @@ Primeiro de tudo, definiremos uma interface, e logo veremos a sua utilidade
 ```
 <br><br>
 
-Logo após alteraremos a classe Nota, e ficará assim:<br>
+Logo após, alteraremos a classe Nota, e ficará assim:<br>
 
 ```
 class Nota implements InterfaceNotas
@@ -161,9 +161,9 @@ Bem acredito, que pude demonstrar algumas possibilidades que o simplefactory nos
 
 <h3 id="2">Bridge</h3>
 O segundo design pattern que falaremos será o Brigde, ele consiste em uma injeção de dependencia<br> 
-em uma classe abstrata, e essa injeção de dependencia será dinamica, ou seja,essa dependencia que <br>
+em uma classe abstrata, e essa injeção de dependencia será dinamica, ou seja, essa dependencia que <br>
 está sendo injetada pode ter comportamentos variados, claro obedecendo a sua interface.<br>
-Ou seja o bridge, ele funciona desacoplando a interface que injeta a classe abstrata <br>
+Ou seja, o bridge, ele funciona desacoplando a interface que injeta a classe abstrata <br>
 
 Explicando sem exemplo, fica meio confuso, então partiremos para exemplos:<br>
 
@@ -241,7 +241,7 @@ public function __construct(APIDatabaseInterface $database){
     }
 ```
 
-lembra no começo que foi dito que o design pattern Bridge : 
+lembra no começo que foi dito que o design pattern Bridge: 
 >  "consiste em uma injeção de dependencia"<br>
 
 
@@ -256,7 +256,9 @@ interface APIDatabaseInterface{
     public function InsertUser($data);
     public function UpdateUser($data);
 }
+```
 
+```
 public function __construct(APIDatabaseInterface $database){
         $this->db = $database;
     }
