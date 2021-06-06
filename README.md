@@ -389,4 +389,4 @@ $mongoDb->connect();
 
 
 <h1>Em desenvolvimento</h1>
-As partes faltantes, será adicionada em breve
+As partes faltantes, serão adicionadas em breve
