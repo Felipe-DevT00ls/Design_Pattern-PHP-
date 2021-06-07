@@ -167,13 +167,13 @@ Ou seja, o bridge, ele funciona desacoplando a interface que injeta a classe abs
 
 Explicando sem exemplo, fica meio confuso, então partiremos para exemplos:<br>
 
-Primeiro de tudo Vamos imaginar que temos um projeto pra fazer, mas uma das necessidades da aplicação é que ela tenha capacidade de conectar tanto com um banco de 
+Primeiro de tudo, vamos imaginar que temos um projeto pra fazer, mas uma das necessidades da aplicação é que ela tenha capacidade de conectar tanto com um banco de 
 dados Mariadb como um banco Mongodb. Observando esse desafio do projeto observamos que facilmente poderiamos ter uma enorme dificuldade de atualizar essa funcionalidade do projeto no futuro caso ela seja mal desenvolvida.
 
 Bem, através do design paternn bridge podemos driblar varias das dificuldades que esse projeto nos propõe.
 Então vamos começar: 
 
-Primeiro de tudo sabemos que teremos que preparar o back end pra consiguir lidar com dois tipos de bd, dependendo da necessidade.
+Primeiro de tudo, sabemos que teremos que preparar o back end pra consiguir lidar com dois tipos de bd, dependendo da necessidade.
 entao definiremos a interface `APIDatabaseInterface` que ficará assim:
 
 ```
